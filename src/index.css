@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+.bg-random {
+  background-image: url(https://source.unsplash.com/1980x1080/?technology);
+}
+
+
+.nav-active.active{
+  background-color: #3d3d3d;
+
+}
