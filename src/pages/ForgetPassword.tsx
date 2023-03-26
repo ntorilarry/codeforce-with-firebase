@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import Logo from "../assets/code.png";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import { toast, Toaster } from "react-hot-toast";
 
@@ -18,16 +18,16 @@ const auth = getAuth(app);
 
 function ForgetPassword() {
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
   
     let handleSubmit = async (e) => {
       e.preventDefault();
-      console.log(email, password);
+      console.log(email);
       setEmail("");
   
-      signInWithEmailAndPassword(auth, email, password)
+      sendPasswordResetEmail(auth, email)
         .then((response) => {
           console.log(response);
+          toast.success("Password reset email sent");
         })
         .catch((err) => {
           console.log(err);
@@ -37,7 +37,7 @@ function ForgetPassword() {
   return (
     <div className='bg-random'>
       <Toaster/>
-        <section className="bg-black bg-opacity-50 py-20 lg:py-[120px]">
+        <section className="bg-black bg-opacity-50 h-screen flex items-center">
           <div className="container mx-auto">
             <div className="flex flex-wrap">
               <div className="w-full px-4">

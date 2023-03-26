@@ -43,7 +43,7 @@ function Register() {
   return (
     <div className="bg-random">
       <Toaster/>
-      <section className="bg-black bg-opacity-50 py-20 lg:py-[120px]">
+      <section className="bg-black bg-opacity-50 h-screen flex items-center">
         <div className="container mx-auto">
           <div className="flex flex-wrap">
             <div className="w-full px-4">

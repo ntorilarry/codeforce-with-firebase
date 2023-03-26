@@ -41,72 +41,65 @@ function Login() {
   };
 
   return (
-    <div>
-      <div className="bg-random">
-        <Toaster />
-        <section className="bg-black bg-opacity-50 py-20 lg:py-[120px]">
-          <div className="container mx-auto">
-            <div className="flex flex-wrap">
-              <div className="w-full px-4">
-                <div className="bg-[#2d2d2d] relative mx-auto max-w-[525px] overflow-hidden rounded-2xl py-16 px-10 text-center sm:px-12 md:px-[60px]">
-                  <div className="mb-10 text-center md:mb-16">
-                    <a href="/" className="mx-auto inline-block max-w-[160px]">
-                      <img src={Logo} alt="logo" />
-                    </a>
-                    <h2 className="text-2xl font-semibold text-white">
-                      Sign In
-                    </h2>
-                  </div>
-                  <form onSubmit={handleSubmit}>
-                    <div className="mb-6">
-                      <input
-                        type="text"
-                        placeholder="Email"
-                        name="email"
-                        id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="w-full rounded-2xl bg-[#3d3d3d] py-4 px-5 text-base text-white placeholder-[#ACB6BE] outline-none focus:border-primary focus-visible:shadow-none"
-                      />
-                    </div>
-                    <div className="mb-6">
-                      <input
-                        type="password"
-                        placeholder="Password"
-                        name="password"
-                        id="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        className="w-full rounded-2xl bg-[#3d3d3d] py-4 px-5 text-base text-white placeholder-[#ACB6BE] outline-none focus:border-primary focus-visible:shadow-none"
-                      />
-                    </div>
-                    <div className="mb-10">
-                      <button className="w-full cursor-pointer rounded-2xl border bg-primary py-3 px-5 text-base text-white transition hover:bg-white hover:text-black">
-                        Sign In
-                      </button>
-                    </div>
-                  </form>
-                  <Link
-                    to="/forget-password"
-                    className="mb-2 inline-block text-base text-[#adadad] hover:text-primary hover:underline"
-                  >
-                    Forget Password?
-                  </Link>
-                  <p className="text-base text-[#adadad]">
-                    Not a member yet?
-                    <Link
-                      to="register"
-                      className="text-primary hover:underline"
-                    >
-                      Sign Up
-                    </Link>
-                  </p>
+    <div className="bg-random">
+      <Toaster />
+      <section className="bg-black bg-opacity-50 h-screen flex items-center ">
+        <div className="container mx-auto">
+          <div className="flex flex-wrap">
+            <div className="w-full px-4">
+              <div className="bg-[#2d2d2d] relative mx-auto max-w-[525px] overflow-hidden rounded-2xl py-16 px-10 text-center sm:px-12 md:px-[60px]">
+                <div className="mb-10 text-center md:mb-16">
+                  <a href="/" className="mx-auto inline-block max-w-[160px]">
+                    <img src={Logo} alt="logo" />
+                  </a>
+                  <h2 className="text-2xl font-semibold text-white">Sign In</h2>
                 </div>
+                <form onSubmit={handleSubmit}>
+                  <div className="mb-6">
+                    <input
+                      type="text"
+                      placeholder="Email"
+                      name="email"
+                      id="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="w-full rounded-2xl bg-[#3d3d3d] py-4 px-5 text-base text-white placeholder-[#ACB6BE] outline-none focus:border-primary focus-visible:shadow-none"
+                    />
+                  </div>
+                  <div className="mb-6">
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      name="password"
+                      id="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      className="w-full rounded-2xl bg-[#3d3d3d] py-4 px-5 text-base text-white placeholder-[#ACB6BE] outline-none focus:border-primary focus-visible:shadow-none"
+                    />
+                  </div>
+                  <div className="mb-10">
+                    <button className="w-full cursor-pointer rounded-2xl border bg-primary py-3 px-5 text-base text-white transition hover:bg-white hover:text-black">
+                      Sign In
+                    </button>
+                  </div>
+                </form>
+                <Link
+                  to="/forget-password"
+                  className="mb-2 inline-block text-base text-[#adadad] hover:text-primary hover:underline"
+                >
+                  Forget Password?
+                </Link>
+                <p className="text-base text-[#adadad]">
+                  Not a member yet?
+                  <Link to="register" className="text-primary hover:underline">
+                    Sign Up
+                  </Link>
+                </p>
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }
