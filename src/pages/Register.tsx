@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../assets/code.png";
 import { useNavigate } from "react-router-dom";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, sendEmailVerification, onAuthStateChanged } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import { toast, Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
@@ -31,8 +31,8 @@ function Register() {
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((response) => {
-        toast.success("Registeration Successful");
-        redirect("/")
+        sendEmailVerification(auth.currentUser)
+        redirect("/verify-email")
         console.log(response);
       })
       .catch((err) => {

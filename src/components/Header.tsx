@@ -1,15 +1,15 @@
-import React from "react";
+import React,{useState} from "react";
 import Logo from "../assets/code.png";
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      {" "}
       <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-[#2d2d2d] dark:border-gray-700">
         <div className="px-3 py-5 lg:px-5 lg:pl-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center justify-start">
-              <button
+              <button onClick={() => setIsOpen(true)}
                 data-drawer-target="logo-sidebar"
                 data-drawer-toggle="logo-sidebar"
                 aria-controls="logo-sidebar"
