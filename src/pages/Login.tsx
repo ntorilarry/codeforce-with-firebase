@@ -6,6 +6,7 @@ import { initializeApp } from "firebase/app";
 import { toast, Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyCT-h9kvampYgIppJwxHhIBKYsstWS02UY",
   authDomain: "codeforce-d2cf3.firebaseapp.com",
