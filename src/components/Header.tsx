@@ -5,7 +5,7 @@ import Drawer from "./Drawer";
 function Header() {
   return (
     <div>
-      <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-[#2d2d2d] dark:border-gray-700">
+      <nav className="fixed top-0 z-50 w-full border-b bg-[#2d2d2d] border-gray-700">
         <div className="px-3 py-5 lg:px-5 lg:pl-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center justify-start">
@@ -19,7 +19,7 @@ function Header() {
                 <div>
                   <button
                     type="button"
-                    className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-600"
                     aria-expanded="false"
                     data-dropdown-toggle="dropdown-user"
                   >
@@ -32,18 +32,18 @@ function Header() {
                   </button>
                 </div>
                 <div
-                  className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
+                  className="z-50 hidden my-4 text-base list-none divide-y rounded shadow bg-gray-700 divide-gray-600"
                   id="dropdown-user"
                 >
                   <div className="px-4 py-3" role="none">
                     <p
-                      className="text-sm text-gray-900 dark:text-white"
+                      className="text-sm text-white"
                       role="none"
                     >
                       Neil Sims
                     </p>
                     <p
-                      className="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
+                      className="text-sm font-medium truncate text-gray-300"
                       role="none"
                     >
                       neil.sims@flowbite.com
